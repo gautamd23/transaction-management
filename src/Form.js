@@ -7,7 +7,8 @@ export default function Form({handleSubmit,
     transactions,
     setBalance,
     setAmount,
-    setAccountId}) {
+    setAccountId,
+    errorFetching}) {
   return (
     <div className="">
         <h1 className="font-bold pb-6 text-center text-2xl pt-3">
@@ -43,6 +44,9 @@ export default function Form({handleSubmit,
             >
               Submit
             </button>
+          </div>
+          <div>
+            {errorFetching ==="error" ? <h1 className='text-red-700'>Please enter valid Account ID</h1> : <></>}
           </div>
         </form>
       </div>
